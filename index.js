@@ -31,7 +31,7 @@ const createTimerAnimator = () => {
       const hours = (timestamp - minutes * 60 - seconds) / 3600;
 
       timerEl.innerHTML = `
-        ${hours > 100 ? hours : `0${hours}`.slice(-2)} :
+        ${hours >= 100 ? hours : `0${hours}`.slice(-2)} :
         ${`0${minutes}`.slice(-2)} :
         ${`0${seconds}`.slice(-2)}
       `;
